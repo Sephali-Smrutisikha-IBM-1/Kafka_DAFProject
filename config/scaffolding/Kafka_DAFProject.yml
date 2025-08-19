@@ -12,6 +12,14 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
+- serviceName: project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections:Apache_kafka_P
+  packages:
+  - name: Kafka_DAFProject
+    version: "1.0"
+  - name: WmKafkaAdapter
+    version: 9.6.0.0.26
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections:Confluent_Kafka_P
   packages:
   - name: Kafka_DAFProject
@@ -54,11 +62,15 @@ configurationVariables:
   : org.apache.kafka.common.serialization.StringSerializer
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionManagerSettings.poolable
   : "true"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.maxRetry
+  : "2147483647"
   jdbc.SAP TxStore Pool.driverAlias: MySQL CC Driver
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.batchSize
   : "16384"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.schemaPkgName
   : ""
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionEnabled
+  : "false"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.enableAutoCommit
   : "true"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.autoOffsetReset
@@ -74,14 +86,22 @@ configurationVariables:
   : "0"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.schemaRegistryCredentials
   : '******'
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.clientID
+  : democon1
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionManagerSettings.startupBackoffSecs
+  : "10"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.keyDeserializer
   : org.apache.kafka.common.serialization.StringDeserializer
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.schemaRegistryURL
   : ""
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionManagerSettings.poolable
+  : "false"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.schemaRegistryURL
   : ""
   jdbc.SAP TxStore Pool.waitingThread: "10"
   jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.otherProperties
+  : ""
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.compressionType
   : none
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.otherProperties
@@ -90,6 +110,8 @@ configurationVariables:
   : ""
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.deserializerErrorHandler
   : ""
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.kafkaVersion
+  : v11+
   jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.autoCommitInterval
   : "5000"
@@ -101,22 +123,38 @@ configurationVariables:
   : "1000"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.groupId
   : sesm
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.batchSize
+  : "16384"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.trustStoreAlias
   : ""
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.sendBufferSize
+  : "131072"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.kerberosServiceName
   : ""
   jdbcfunc.SAPTxStore.failFastMode: false
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionManagerSettings.poolIncrementSize
+  : "1"
   jdbc.SAP TxStore Pool.poolThreshold: "0"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.serverList
+  : vmadptest02.southindia.cloudapp.azure.com:9441
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionManagerSettings.startupBackoffSecs
   : "10"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.valueDeserializer
   : org.apache.kafka.common.serialization.StringDeserializer
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.requestTimeOut
+  : "30000"
   jdbc.SAP TxStore Pool.spyenabled: "false"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionManagerSettings.blockingTimeout
+  : "1000"
   jdbc.SAP TxStore Pool.useSSL: "false"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.maximumPoolSize
   : "10"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.poolIncrementSize
   : "1"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.ackIndicator
+  : "0"
   jdbc.SAP TxStore Pool.minConns: "5"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionManagerSettings.expireTimeout
   : "1000"
@@ -124,6 +162,8 @@ configurationVariables:
   : "0"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.requestTimeOut
   : "30000"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionManagerSettings.maximumPoolSize
+  : "10"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.jaasConfig
   : '******'
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.maxRetry
@@ -132,6 +172,8 @@ configurationVariables:
   : "1"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.jaasConfig
   : '******'
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionManagerSettings.minimumPoolSize
+  : "1"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionEnabled
   : "false"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.clientID
@@ -140,6 +182,8 @@ configurationVariables:
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.poolable
   : "false"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.otherProperties
+  : ""
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.partitionerClass
   : ""
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_kafka_C.connectionSettings.securityProtocol
   : None
@@ -151,8 +195,12 @@ configurationVariables:
   : vmadptest02.southindia.cloudapp.azure.com:9441
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionEnabled
   : "false"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.keySerializerClass
+  : org.apache.kafka.common.serialization.StringSerializer
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.expireTimeout
   : "1000"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.compressionType
+  : none
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.valueSerializerClass
   : org.apache.kafka.common.serialization.StringSerializer
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.minimumPoolSize
@@ -162,5 +210,9 @@ configurationVariables:
   jdbc.SAP TxStore Pool.userid: root
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.startupBackoffSecs
   : "10"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionManagerSettings.expireTimeout
+  : "1000"
   ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.sendBufferSize
   : "131072"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Apache_kafka_P.connectionSettings.valueSerializerClass
+  : org.apache.kafka.common.serialization.StringSerializer
