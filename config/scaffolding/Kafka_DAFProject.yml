@@ -7,21 +7,93 @@ packages:
   gitUrl: https://github.com/Sephali-Smrutisikha-IBM-1
   gitUsername: Sephali-Smrutisikha-IBM-1
   gitBranch: main
+- name: WmKafkaAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
+services:
+- serviceName: project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections:Confluent_Kafka_P
+  packages:
+  - name: Kafka_DAFProject
+    version: "1.0"
+  - name: WmKafkaAdapter
+    version: 9.6.0.0.26
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
   jdbc.SAP TxStore Pool.maxConns: "10"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.trustStoreAlias
+  : ""
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.kerberosServiceName
+  : ""
   jdbcfunc.SAPTxStore.failFastMode: false
   jdbc.SAP TxStore Pool.poolThreshold: "0"
-  jdbc.SAP TxStore Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.schemaRegistryCredentials
+  : '******'
   jdbc.SAP TxStore Pool.spyenabled: "false"
   jdbc.SAP TxStore Pool.useSSL: "false"
-  jdbc.SAP TxStore Pool.waitingThread: "10"
-  jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.poolIncrementSize
+  : "1"
   jdbc.SAP TxStore Pool.password: "{AES}nrGf3u7Wt20hFBGh5ZeEuQ=="
   jdbc.SAP TxStore Pool.spyparms: SpyAttributes=(log=(file)logs/spy/SAP_TxStore_Pool.log;logTName=yes;timestamp=yes)
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.kafkaVersion
+  : v11+
   jdbc.SAP TxStore Pool.snoopenabled: "false"
-  jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
   jdbc.SAP TxStore Pool.expireTime: "60000"
   jdbc.SAP TxStore Pool.minConns: "5"
-  jdbc.SAP TxStore Pool.userid: root
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.keySerializerClass
+  : org.apache.kafka.common.serialization.StringSerializer
   jdbc.SAP TxStore Pool.driverAlias: MySQL CC Driver
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.batchSize
+  : "16384"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.schemaPkgName
+  : ""
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.requestTimeOut
+  : "30000"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.jaasConfig
+  : '******'
   jdbcfunc.SAPTxStore.connPoolAlias: SAP TxStore Pool
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.maxRetry
+  : "2147483647"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.partitionerClass
+  : ""
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.schemaRegistryURL
+  : ""
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.clientID
+  : democon1
+  jdbc.SAP TxStore Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.otherProperties
+  : ""
+  jdbc.SAP TxStore Pool.waitingThread: "10"
+  jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.compressionType
+  : none
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.ackIndicator
+  : "0"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.keyStoreAlias
+  : ""
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.securityProtocol
+  : None
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.serverList
+  : vmadptest02.southindia.cloudapp.azure.com:9441
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionEnabled
+  : "false"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.valueSerializerClass
+  : org.apache.kafka.common.serialization.StringSerializer
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.minimumPoolSize
+  : "1"
+  jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.blockingTimeout
+  : "1000"
+  jdbc.SAP TxStore Pool.userid: root
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.Kafka_DAFProject.project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections.Confluent_Kafka_P.connectionSettings.sendBufferSize
+  : "131072"
