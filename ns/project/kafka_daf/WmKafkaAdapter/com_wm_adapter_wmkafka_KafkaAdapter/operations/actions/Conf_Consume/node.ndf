@@ -26,6 +26,32 @@
           <value name="form_qualified">false</value>
           <value name="is_global">false</value>
           <array name="rec_fields" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">field</value>
+              <value name="node_subtype">unknown</value>
+              <value name="is_public">false</value>
+              <value name="field_name">$topics</value>
+              <value name="field_type">string</value>
+              <value name="field_dim">1</value>
+              <value name="field_opt">true</value>
+              <value name="nillable">true</value>
+              <value name="form_qualified">false</value>
+              <value name="is_global">false</value>
+              <value name="is_soap_array_encoding_used">true</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">field</value>
+              <value name="node_subtype">unknown</value>
+              <value name="is_public">false</value>
+              <value name="field_name">pollTime</value>
+              <value name="field_type">object</value>
+              <value name="field_dim">0</value>
+              <value name="field_opt">true</value>
+              <value name="wrapper_type">java.lang.Long</value>
+              <value name="nillable">true</value>
+              <value name="form_qualified">false</value>
+              <value name="is_global">false</value>
+            </record>
           </array>
           <value name="modifiable">true</value>
         </record>
@@ -65,6 +91,126 @@
           <value name="form_qualified">false</value>
           <value name="is_global">false</value>
           <array name="rec_fields" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">record</value>
+              <value name="node_subtype">unknown</value>
+              <value name="is_public">false</value>
+              <value name="field_name">messages</value>
+              <value name="field_type">record</value>
+              <value name="field_dim">1</value>
+              <value name="field_opt">true</value>
+              <value name="nillable">true</value>
+              <value name="form_qualified">false</value>
+              <value name="is_global">false</value>
+              <value name="is_soap_array_encoding_used">true</value>
+              <array name="rec_fields" type="record" depth="1">
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">field</value>
+                  <value name="node_subtype">unknown</value>
+                  <value name="is_public">false</value>
+                  <value name="field_name">topic</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="field_opt">true</value>
+                  <value name="nillable">true</value>
+                  <value name="form_qualified">false</value>
+                  <value name="is_global">false</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">field</value>
+                  <value name="node_subtype">unknown</value>
+                  <value name="is_public">false</value>
+                  <value name="field_name">offset</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="field_opt">true</value>
+                  <value name="wrapper_type">java.lang.Long</value>
+                  <value name="nillable">true</value>
+                  <value name="form_qualified">false</value>
+                  <value name="is_global">false</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">field</value>
+                  <value name="node_subtype">unknown</value>
+                  <value name="is_public">false</value>
+                  <value name="field_name">partition</value>
+                  <value name="field_type">object</value>
+                  <value name="field_dim">0</value>
+                  <value name="field_opt">true</value>
+                  <value name="wrapper_type">java.lang.Integer</value>
+                  <value name="nillable">true</value>
+                  <value name="form_qualified">false</value>
+                  <value name="is_global">false</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">field</value>
+                  <value name="node_subtype">unknown</value>
+                  <value name="is_public">false</value>
+                  <value name="field_name">key</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="field_opt">true</value>
+                  <value name="nillable">true</value>
+                  <value name="form_qualified">false</value>
+                  <value name="is_global">false</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">field</value>
+                  <value name="node_subtype">unknown</value>
+                  <value name="is_public">false</value>
+                  <value name="field_name">value</value>
+                  <value name="field_type">string</value>
+                  <value name="field_dim">0</value>
+                  <value name="field_opt">true</value>
+                  <value name="nillable">true</value>
+                  <value name="form_qualified">false</value>
+                  <value name="is_global">false</value>
+                </record>
+                <record javaclass="com.wm.util.Values">
+                  <value name="node_type">record</value>
+                  <value name="node_subtype">unknown</value>
+                  <value name="is_public">false</value>
+                  <value name="field_name">header</value>
+                  <value name="field_type">record</value>
+                  <value name="field_dim">1</value>
+                  <value name="field_opt">true</value>
+                  <value name="nillable">true</value>
+                  <value name="form_qualified">false</value>
+                  <value name="is_global">false</value>
+                  <value name="is_soap_array_encoding_used">true</value>
+                  <array name="rec_fields" type="record" depth="1">
+                    <record javaclass="com.wm.util.Values">
+                      <value name="node_type">field</value>
+                      <value name="node_subtype">unknown</value>
+                      <value name="is_public">false</value>
+                      <value name="field_name">key</value>
+                      <value name="field_type">string</value>
+                      <value name="field_dim">1</value>
+                      <value name="field_opt">true</value>
+                      <value name="nillable">true</value>
+                      <value name="form_qualified">false</value>
+                      <value name="is_global">false</value>
+                      <value name="is_soap_array_encoding_used">true</value>
+                    </record>
+                    <record javaclass="com.wm.util.Values">
+                      <value name="node_type">field</value>
+                      <value name="node_subtype">unknown</value>
+                      <value name="is_public">false</value>
+                      <value name="field_name">value</value>
+                      <value name="field_type">object</value>
+                      <value name="field_dim">1</value>
+                      <value name="field_opt">true</value>
+                      <value name="nillable">true</value>
+                      <value name="form_qualified">false</value>
+                      <value name="is_global">false</value>
+                      <value name="is_soap_array_encoding_used">true</value>
+                    </record>
+                  </array>
+                  <value name="modifiable">true</value>
+                </record>
+              </array>
+              <value name="modifiable">true</value>
+            </record>
           </array>
           <value name="modifiable">true</value>
         </record>
@@ -110,5 +256,5 @@
   <value name="is_public">false</value>
   <value name="node_type">service</value>
   <value name="IRTNODE_VERSION">1</value>
-  <value name="IRTNODE_PROPERTY">CwQAAAABBQEEGQBjAG8AbQAuAHcAbQAuAGQAYQB0AGEALgBJAFMATQBlAG0ARABhAHQAYQBJAG0AcABsBBMAcwBlAHIAdgBpAGMAZQBUAGUAbQBwAGwAYQB0AGUATgBhAG0AZQRFAGMAbwBtAC4AdwBtAC4AYQBkAGEAcAB0AGUAcgAuAHcAbQBrAGEAZgBrAGEALgBzAGMAaABlAG0AYQAuAHMAZQByAHYAaQBjAGUAcwAuAEsAYQBmAGsAYQBDAG8AbgBzAHUAbQBlAHIAUwBlAHIAdgBpAGMAZQBXAGkAdABoAFMAYwBoAGUAbQBhBA8AbQBlAHQAYQBkAGEAdABhAFYAZQByAHMAaQBvAG4LBAAAAAAEDgBjAG8AbgBuAGUAYwB0AGkAbwBuAE4AYQBtAGUEYgBwAHIAbwBqAGUAYwB0AC4AawBhAGYAawBhAF8AZABhAGYALgBXAG0ASwBhAGYAawBhAEEAZABhAHAAdABlAHIALgBjAG8AbQBfAHcAbQBfAGEAZABhAHAAdABlAHIAXwB3AG0AawBhAGYAawBhAF8ASwBhAGYAawBhAEEAZABhAHAAdABlAHIALgBjAG8AbgBuAGUAYwB0AGkAbwBuAHMAOgBDAG8AbgBmAGwAdQBlAG4AdABfAGsAYQBmAGsAYQBfAEMEEgB0AGUAbQBwAGwAYQB0AGUAUAByAG8AcABlAHIAdABpAGUAcwUBAAIEDABmAHUAbgBjAHQAaQBvAG4ATgBhAG0AZQQOAFIAZQBjAGUAaQB2AGUATQBlAHMAcwBhAGcAZQQGAHQAbwBwAGkAYwBzCgAEEABqAGEAdgBhAC4AbABhAG4AZwAuAFMAdAByAGkAbgBnBAoAcABhAHIAdABpAHQAaQBvAG4AcwoAABAECwBzAGUAZQBrAE8AZgBmAHMAZQB0AHMKAAAQBA0AawBlAHkAUwBjAGgAZQBtAGEATgBhAG0AZQQABA8AdgBhAGwAdQBlAFMAYwBoAGUAbQBhAE4AYQBtAGUAGAQTAGkAbgBwAHUAdABQAGEAcgBhAG0AZQB0AGUAcgBOAGEAbQBlAHMKAAAQBA8AaQBuAHAAdQB0AEYAaQBlAGwAZABOAGEAbQBlAHMKAAAQBA8AaQBuAHAAdQB0AEYAaQBlAGwAZABUAHkAcABlAHMKAAAQBBQAbwB1AHQAcAB1AHQAUABhAHIAYQBtAGUAdABlAHIATgBhAG0AZQBzCgcAEAQQAG0AZQBzAHMAYQBnAGUAcwBbAF0ALgB0AG8AcABpAGMEEQBtAGUAcwBzAGEAZwBlAHMAWwBdAC4AbwBmAGYAcwBlAHQEFABtAGUAcwBzAGEAZwBlAHMAWwBdAC4AcABhAHIAdABpAHQAaQBvAG4EDgBtAGUAcwBzAGEAZwBlAHMAWwBdAC4AawBlAHkEEABtAGUAcwBzAGEAZwBlAHMAWwBdAC4AdgBhAGwAdQBlBBcAbQBlAHMAcwBhAGcAZQBzAFsAXQAuAGgAZQBhAGQAZQByAFsAXQAuAGsAZQB5BBkAbQBlAHMAcwBhAGcAZQBzAFsAXQAuAGgAZQBhAGQAZQByAFsAXQAuAHYAYQBsAHUAZQQQAG8AdQB0AHAAdQB0AEYAaQBlAGwAZABOAGEAbQBlAHMKAAAQBBAAbwB1AHQAcAB1AHQARgBpAGUAbABkAFQAeQBwAGUAcwoHABAEEgBqAGEAdgBhAC4AbABhAG4AZwAuAFMAdAByAGkAbgBnAFsAXQQQAGoAYQB2AGEALgBsAGEAbgBnAC4ATABvAG4AZwBbAF0EEwBqAGEAdgBhAC4AbABhAG4AZwAuAEkAbgB0AGUAZwBlAHIAWwBdADQANAQUAGoAYQB2AGEALgBsAGEAbgBnAC4AUwB0AHIAaQBuAGcAWwBdAFsAXQQUAGoAYQB2AGEALgBsAGEAbgBnAC4ATwBiAGoAZQBjAHQAWwBdAFsAXQQQAGQAZQBzAGkAZwBuAFQAaQBtAGUATABvAGMAYQBsAGUEBQBlAG4AXwBVAFMCAAQZAGEAZABhAHAAdABlAHIAUwBlAHIAdgBpAGMAZQBOAG8AZABlAFYAZQByAHMAaQBvAG4LBAAAAAIECwBhAGQAYQBwAHQAZQByAFQAeQBwAGUEIwBjAG8AbQAuAHcAbQAuAGEAZABhAHAAdABlAHIALgB3AG0AawBhAGYAawBhAC4ASwBhAGYAawBhAEEAZABhAHAAdABlAHIEDwBpAG4AcAB1AHQAUgBlAGMAbwByAGQATgBhAG0AZQQRAEMAbwBuAGYAXwBDAG8AbgBzAHUAbQBlAEkAbgBwAHUAdAQQAG8AdQB0AHAAdQB0AFIAZQBjAG8AcgBkAE4AYQBtAGUEEgBDAG8AbgBmAF8AQwBvAG4AcwB1AG0AZQBPAHUAdABwAHUAdAIA</value>
+  <value name="IRTNODE_PROPERTY">CwQAAAABBQEEGQBjAG8AbQAuAHcAbQAuAGQAYQB0AGEALgBJAFMATQBlAG0ARABhAHQAYQBJAG0AcABsBBMAcwBlAHIAdgBpAGMAZQBUAGUAbQBwAGwAYQB0AGUATgBhAG0AZQRFAGMAbwBtAC4AdwBtAC4AYQBkAGEAcAB0AGUAcgAuAHcAbQBrAGEAZgBrAGEALgBzAGMAaABlAG0AYQAuAHMAZQByAHYAaQBjAGUAcwAuAEsAYQBmAGsAYQBDAG8AbgBzAHUAbQBlAHIAUwBlAHIAdgBpAGMAZQBXAGkAdABoAFMAYwBoAGUAbQBhBA8AbQBlAHQAYQBkAGEAdABhAFYAZQByAHMAaQBvAG4LBAAAAAAEDgBjAG8AbgBuAGUAYwB0AGkAbwBuAE4AYQBtAGUEYgBwAHIAbwBqAGUAYwB0AC4AawBhAGYAawBhAF8AZABhAGYALgBXAG0ASwBhAGYAawBhAEEAZABhAHAAdABlAHIALgBjAG8AbQBfAHcAbQBfAGEAZABhAHAAdABlAHIAXwB3AG0AawBhAGYAawBhAF8ASwBhAGYAawBhAEEAZABhAHAAdABlAHIALgBjAG8AbgBuAGUAYwB0AGkAbwBuAHMAOgBDAG8AbgBmAGwAdQBlAG4AdABfAGsAYQBmAGsAYQBfAEMEEgB0AGUAbQBwAGwAYQB0AGUAUAByAG8AcABlAHIAdABpAGUAcwUBAAIEEABkAGUAcwBpAGcAbgBUAGkAbQBlAEwAbwBjAGEAbABlBAUAZQBuAF8AVQBTBBAAbwB1AHQAcAB1AHQARgBpAGUAbABkAFQAeQBwAGUAcwoHBBAAagBhAHYAYQAuAGwAYQBuAGcALgBTAHQAcgBpAG4AZwQSAGoAYQB2AGEALgBsAGEAbgBnAC4AUwB0AHIAaQBuAGcAWwBdBBAAagBhAHYAYQAuAGwAYQBuAGcALgBMAG8AbgBnAFsAXQQTAGoAYQB2AGEALgBsAGEAbgBnAC4ASQBuAHQAZQBnAGUAcgBbAF0AEQARBBQAagBhAHYAYQAuAGwAYQBuAGcALgBTAHQAcgBpAG4AZwBbAF0AWwBdBBQAagBhAHYAYQAuAGwAYQBuAGcALgBPAGIAagBlAGMAdABbAF0AWwBdBBAAbwB1AHQAcAB1AHQARgBpAGUAbABkAE4AYQBtAGUAcwoHABAEEABtAGUAcwBzAGEAZwBlAHMAWwBdAC4AdABvAHAAaQBjBBEAbQBlAHMAcwBhAGcAZQBzAFsAXQAuAG8AZgBmAHMAZQB0BBQAbQBlAHMAcwBhAGcAZQBzAFsAXQAuAHAAYQByAHQAaQB0AGkAbwBuBA4AbQBlAHMAcwBhAGcAZQBzAFsAXQAuAGsAZQB5BBAAbQBlAHMAcwBhAGcAZQBzAFsAXQAuAHYAYQBsAHUAZQQXAG0AZQBzAHMAYQBnAGUAcwBbAF0ALgBoAGUAYQBkAGUAcgBbAF0ALgBrAGUAeQQZAG0AZQBzAHMAYQBnAGUAcwBbAF0ALgBoAGUAYQBkAGUAcgBbAF0ALgB2AGEAbAB1AGUEFABvAHUAdABwAHUAdABQAGEAcgBhAG0AZQB0AGUAcgBOAGEAbQBlAHMKBwAQABsAHAAdAB4AHwAgACEEDwBpAG4AcAB1AHQARgBpAGUAbABkAFQAeQBwAGUAcwoCABAAEQQOAGoAYQB2AGEALgBsAGEAbgBnAC4ATABvAG4AZwQPAGkAbgBwAHUAdABGAGkAZQBsAGQATgBhAG0AZQBzCgIAEAQJACQAdABvAHAAaQBjAHMAWwBdBAgAcABvAGwAbABUAGkAbQBlBBMAaQBuAHAAdQB0AFAAYQByAGEAbQBlAHQAZQByAE4AYQBtAGUAcwoCABAANAA1BA8AdgBhAGwAdQBlAFMAYwBoAGUAbQBhAE4AYQBtAGUEAAQNAGsAZQB5AFMAYwBoAGUAbQBhAE4AYQBtAGUAPAQLAHMAZQBlAGsATwBmAGYAcwBlAHQAcwoBABAEDABlADIAZQBfADAAXwBvAGYAZgBzAGUAdAQKAHAAYQByAHQAaQB0AGkAbwBuAHMKAQAQBAEAMAQGAHQAbwBwAGkAYwBzCgEAEAQDAGUAMgBlBAwAZgB1AG4AYwB0AGkAbwBuAE4AYQBtAGUEDgBSAGUAYwBlAGkAdgBlAE0AZQBzAHMAYQBnAGUCAAQZAGEAZABhAHAAdABlAHIAUwBlAHIAdgBpAGMAZQBOAG8AZABlAFYAZQByAHMAaQBvAG4LBAAAAAIECwBhAGQAYQBwAHQAZQByAFQAeQBwAGUEIwBjAG8AbQAuAHcAbQAuAGEAZABhAHAAdABlAHIALgB3AG0AawBhAGYAawBhAC4ASwBhAGYAawBhAEEAZABhAHAAdABlAHIEDwBpAG4AcAB1AHQAUgBlAGMAbwByAGQATgBhAG0AZQQRAEMAbwBuAGYAXwBDAG8AbgBzAHUAbQBlAEkAbgBwAHUAdAQQAG8AdQB0AHAAdQB0AFIAZQBjAG8AcgBkAE4AYQBtAGUEEgBDAG8AbgBmAF8AQwBvAG4AcwB1AG0AZQBPAHUAdABwAHUAdAIA</value>
 </Values>
