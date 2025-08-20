@@ -63,7 +63,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">Sephali.Smrutisikha1@ibm.com</value>
-    <value name="lastModifiedDate">1755665867361</value>
+    <value name="lastModifiedDate">1755665982142</value>
     <value name="displayName">Kafka_DAF_Apache</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
@@ -159,8 +159,7 @@
         </array>
         <array name="lookupTransformer" type="object" depth="1" javaclass="java.lang.Object">
         </array>
-        <array name="mapSet" type="object" depth="1" javaclass="java.lang.Object">
-        </array>
+        <null name="mapSet"/>
         <array name="inputMap" type="object" depth="1" javaclass="java.lang.Object">
         </array>
         <array name="outputMap" type="object" depth="1" javaclass="java.lang.Object">
@@ -178,6 +177,7 @@
         <number name="nodeIndex" type="Long">1</number>
         <number name="lineNumberForDebug" type="Long">2</number>
         <Boolean name="xmlMapsetSupported">true</Boolean>
+        <null name="outputMapSet"/>
       </record>
       <record name="/2" javaclass="com.wm.util.Values">
         <value name="itemType">APPS</value>
