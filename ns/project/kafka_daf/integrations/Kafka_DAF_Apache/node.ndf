@@ -62,9 +62,8 @@
   <value name="retry_max">0</value>
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
-    <value name="createdBy">Sephali.Smrutisikha1@ibm.com</value>
-    <value name="createdDate">1755613742915</value>
-    <value name="lastModifiedDate">1755613742915</value>
+    <value name="lastModifiedBy">Sephali.Smrutisikha1@ibm.com</value>
+    <value name="lastModifiedDate">1755665867361</value>
     <value name="displayName">Kafka_DAF_Apache</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
@@ -124,6 +123,112 @@
         <value name="nodePathNew">0</value>
         <number name="nodeIndex" type="Long">0</number>
         <number name="lineNumberForDebug" type="Long">1</number>
+        <null name="outputMapSet"/>
+        <value name="nodePathForDebug">0</value>
+      </record>
+      <record name="/1" javaclass="com.wm.util.Values">
+        <value name="itemType">APPS</value>
+        <value name="id">com.wm.adapter.wmkafka.KafkaAdapter</value>
+        <value name="name">Kafka</value>
+        <value name="providerName">WmKafkaAdapter</value>
+        <record name="operation" javaclass="com.wm.util.Values">
+          <value name="operationName">Ap_con_Bp</value>
+          <null name="description"/>
+          <value name="isCustom">true</value>
+          <value name="operationType">actions</value>
+          <value name="projectName">project.kafka_daf</value>
+        </record>
+        <value name="appType">predefined</value>
+        <Boolean name="hasAccount">true</Boolean>
+        <Boolean name="allowCustomOperations">true</Boolean>
+        <value name="allowDeleteApplication">false</value>
+        <value name="allowUpdateApplication">false</value>
+        <null name="certified"/>
+        <Boolean name="deprecated">false</Boolean>
+        <value name="description">Kafka Connector enables you to produce and consume real-time data from Kafka topics.</value>
+        <null name="icon"/>
+        <value name="packageName">WmKafkaAdapter</value>
+        <value name="type">Adapters</value>
+        <value name="version">1.0</value>
+        <Boolean name="serviceReferenceResolved">true</Boolean>
+        <array name="map" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="mapDelete" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="transformer" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="lookupTransformer" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="mapSet" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="inputMap" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="outputMap" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <record name="connection" javaclass="com.wm.util.Values">
+          <value name="connectionName">Apache_kafka_P</value>
+          <value name="connectionType">Apache Kafka® Producer Connection</value>
+          <null name="description"/>
+        </record>
+        <value name="connectionNSName">project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections:Apache_kafka_P</value>
+        <value name="connectionType">Apache Kafka® Producer Connection</value>
+        <Boolean name="accountReferenceResolved">true</Boolean>
+        <number name="ui_step_index" type="Long">2</number>
+        <value name="nodePathNew">1</value>
+        <number name="nodeIndex" type="Long">1</number>
+        <number name="lineNumberForDebug" type="Long">2</number>
+        <Boolean name="xmlMapsetSupported">true</Boolean>
+      </record>
+      <record name="/2" javaclass="com.wm.util.Values">
+        <value name="itemType">APPS</value>
+        <value name="id">com.wm.adapter.wmkafka.KafkaAdapter</value>
+        <value name="name">Kafka</value>
+        <value name="providerName">WmKafkaAdapter</value>
+        <record name="operation" javaclass="com.wm.util.Values">
+          <value name="operationName">Ap_con_c</value>
+          <value name="isCustom">true</value>
+          <value name="operationType">actions</value>
+          <value name="connectionType">sagcloud</value>
+          <value name="projectName">project.kafka_daf</value>
+        </record>
+        <value name="appType">predefined</value>
+        <Boolean name="hasAccount">true</Boolean>
+        <Boolean name="allowCustomOperations">true</Boolean>
+        <value name="allowDeleteApplication">false</value>
+        <value name="allowUpdateApplication">false</value>
+        <null name="certified"/>
+        <Boolean name="deprecated">false</Boolean>
+        <value name="description">Kafka Connector enables you to produce and consume real-time data from Kafka topics.</value>
+        <null name="icon"/>
+        <value name="packageName">WmKafkaAdapter</value>
+        <value name="type">Adapters</value>
+        <value name="version">1.0</value>
+        <record name="connection" javaclass="com.wm.util.Values">
+          <value name="connectionName">Apache_kafka_c</value>
+          <value name="connectionType">sagcloud</value>
+          <null name="description"/>
+        </record>
+        <value name="connectionNSName">project.kafka_daf.WmKafkaAdapter.com_wm_adapter_wmkafka_KafkaAdapter.connections:Apache_kafka_c</value>
+        <value name="connectionType">sagcloud</value>
+        <Boolean name="accountReferenceResolved">true</Boolean>
+        <Boolean name="serviceReferenceResolved">true</Boolean>
+        <array name="map" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="mapDelete" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="transformer" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="lookupTransformer" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <null name="mapSet"/>
+        <array name="inputMap" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="outputMap" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <number name="ui_step_index" type="Long">3</number>
+        <value name="nodePathNew">2</value>
+        <number name="nodeIndex" type="Long">2</number>
+        <number name="lineNumberForDebug" type="Long">3</number>
         <null name="outputMapSet"/>
       </record>
     </record>
